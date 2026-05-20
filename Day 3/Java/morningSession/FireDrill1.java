@@ -6,7 +6,12 @@ public class FireDrill1{
         String[] usersD;
         String[] usersE;
         String[] usersF;
-//        System.out.println(facebookLikes(usersA));
+//      facebookLikes(usersA));
+//      facebookLikes(usersB));
+//      facebookLikes(usersC));
+//      facebookLikes(usersD));
+//      facebookLikes(usersE));
+//      facebookLikes(usersF));
     }
 
     public static int numberOfUsers(String... users){
@@ -22,12 +27,15 @@ public class FireDrill1{
 
     public static String[] usernames(String... users){
         int count = numberOfUsers(users);
-        String[] usernames = new String[count];
+        if (count == 0) return null;
 
+        String[] usernames = new String[count];
+        int j = 0;
         if (count > 0) {
             for (int i = 0; i < count; i++){
                 if (users[i] == null) continue;
-                usernames[i] = users[i];
+                usernames[j] = users[i];
+                j++;
             }
         }
         return usernames;
